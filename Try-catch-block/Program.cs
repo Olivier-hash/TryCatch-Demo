@@ -9,8 +9,20 @@ namespace ProjectName
             Console.WriteLine("Bitte trage eine Zahl ein");
             string userInput = Console.ReadLine();
 
+            // Addition code to divide userinput by zero
             try
             {
+                int userInputAsInt = int.Parse(userInput);
+                int result = userInputAsInt / 0;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Durch 0 teilen ist nicht erlaubt");
+            }
+
+            try
+            {
+                
                 int userInputAsInt = int.Parse(userInput);
             }
             // alt: FormatException, ArgumentNullException, OverflowException, Exception ex
@@ -31,6 +43,12 @@ namespace ProjectName
             {
                 Console.WriteLine("Fehrer aufgetreten! z.b eingegeben wort wer war falsch");
             }
+            finally
+            {
+                // verbindnund schließen, oder Datei Schließen
+                Console.WriteLine("ich werde sowieso ausgeführt");
+            }
+
 
 
             Console.ReadLine();
