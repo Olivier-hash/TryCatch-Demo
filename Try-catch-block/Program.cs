@@ -52,7 +52,7 @@ namespace ProjectName
 
 
             Console.ReadLine();
-            //comd
+            //com
             
         }
        
